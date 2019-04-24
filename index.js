@@ -1,3 +1,5 @@
+const helmet = require('helmet');
+const compression = require('compression');
 const config = require('config');
 const mongoose = require('mongoose');
 const express = require('express');
@@ -23,6 +25,9 @@ mongoose.connect('mongodb://localhost/ternium', { useNewUrlParser: true })
 app.use(express.json());
 app.use('/api/users', users);
 app.use('/api/auth', auth);
+app.use(helmet());
+app.use(compression());
+
 
 
 const port = process.env.PORT || 4000;
