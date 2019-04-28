@@ -1,0 +1,6 @@
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T18:16:10.377Z"}
+{"level":"info","message":"Connected to mongodb://localhost/ternium...","timestamp":"2019-04-28T18:16:11.426Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T18:28:55.280Z"}
+{"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T18:28:56.348Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T18:28:57.638Z"}
+{"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T18:28:58.669Z"}
