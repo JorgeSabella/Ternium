@@ -14,3 +14,30 @@
 {"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T19:06:35.680Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T19:21:08.582Z"}
 {"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T19:21:09.520Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T19:32:14.025Z"}
+{"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T19:32:15.164Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T19:32:17.044Z"}
+{"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T19:32:18.129Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:27:00.877Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:27:01.899Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:27:19.630Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:27:20.420Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:27:46.328Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:27:47.147Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:28:03.697Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:28:04.709Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:31:27.350Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:31:28.313Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:34:12.902Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:34:13.762Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:38:29.744Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:38:30.660Z"}
+{"message":"user is not defined","stack":"ReferenceError: user is not defined\n    at router.put (C:\\Users\\jorge\\semestreI\\Ternium\\routes\\staffs.js:47:14)\n    at C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at module.exports (C:\\Users\\jorge\\semestreI\\Ternium\\middleware\\validateObjectId.js:7:3)\n    at C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\express\\lib\\router\\index.js:275:10)","level":"error","timestamp":"2019-04-28T23:40:16.039Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:40:35.678Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:40:36.672Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:42:36.353Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:42:37.475Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:43:02.932Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:43:03.697Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T23:43:18.905Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T23:43:19.770Z"}
