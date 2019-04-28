@@ -12,3 +12,5 @@
 {"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T19:06:32.787Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T19:06:34.611Z"}
 {"level":"info","message":"Connected to mongodb://localhost/ternium_tests...","timestamp":"2019-04-28T19:06:35.680Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-28T19:21:08.582Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-28T19:21:09.520Z"}
