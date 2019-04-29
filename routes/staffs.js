@@ -31,6 +31,13 @@ router.post('/', async (req, res) => {
     });
 
     staff = await staff.save();
+    
+    await user.team.push({
+        _id: staff._id, 
+        name: staff.name, 
+        registrationId: staff.registrationId
+    });
+    user.save();
 
     res.send(staff);
 });

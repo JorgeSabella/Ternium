@@ -41,9 +41,18 @@ const sessionSchema = new mongoose.Schema({
         minlength: 2,
         maxlength: 1024
       }      
-    }),  
+    }),
     required: true
-  }
+  },
+  data: {
+    type: new mongoose.Schema({
+        gasNatural: Number,
+        co2: Number,
+        hidrogeno: Number,
+        temperatura: Number
+    })
+  },
+  mac: String
 });
 
 const Session = mongoose.model('Session', sessionSchema);
@@ -51,7 +60,8 @@ const Session = mongoose.model('Session', sessionSchema);
 function validateSession(session) {
   const schema = {
     staff: Joi.string().required(),
-    supervisor: Joi.string().required()
+    supervisor: Joi.string().required(),
+    mac: Joi.string()
   };
 
   return Joi.validate(session, schema);

@@ -111,3 +111,53 @@
 {"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T00:21:51.951Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T00:32:38.630Z"}
 {"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T00:32:39.689Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T04:56:17.392Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T04:56:18.342Z"}
+{"message":"E11000 duplicate key error collection: test.staffs index: registrationId_1 dup key: { : \"12345\" }","stack":"MongoError: E11000 duplicate key error collection: test.staffs index: registrationId_1 dup key: { : \"12345\" }\n    at Function.create (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb-core\\lib\\error.js:43:12)\n    at toError (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb\\lib\\utils.js:149:22)\n    at coll.s.topology.insert (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb\\lib\\operations\\collection_ops.js:859:39)\n    at handler (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb-core\\lib\\topologies\\replset.js:1155:22)\n    at C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb-core\\lib\\connection\\pool.js:397:18\n    at _combinedTickCallback (internal/process/next_tick.js:132:7)\n    at process._tickCallback (internal/process/next_tick.js:181:9)","driver":true,"name":"MongoError","index":0,"code":11000,"errmsg":"E11000 duplicate key error collection: test.staffs index: registrationId_1 dup key: { : \"12345\" }","level":"error","timestamp":"2019-04-29T05:02:27.536Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T05:03:30.740Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T05:03:31.735Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T05:04:20.935Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T05:04:21.758Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T05:06:25.466Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T05:06:26.342Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T05:06:35.226Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T05:06:36.033Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T05:10:12.756Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T05:10:13.752Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T05:11:35.928Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T05:11:36.809Z"}
+{"message":"E11000 duplicate key error collection: 5cc0a701ff7a2509b3b86a47_test.staffs index: registrationId_1 dup key: { : \"123\" }","stack":"MongoError: E11000 duplicate key error collection: 5cc0a701ff7a2509b3b86a47_test.staffs index: registrationId_1 dup key: { : \"123\" }\n    at Connection.<anonymous> (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb-core\\lib\\connection\\pool.js:443:61)\n    at emitTwo (events.js:126:13)\n    at Connection.emit (events.js:214:7)\n    at processMessage (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb-core\\lib\\connection\\connection.js:364:10)\n    at TLSSocket.<anonymous> (C:\\Users\\jorge\\semestreI\\Ternium\\node_modules\\mongoose\\node_modules\\mongodb-core\\lib\\connection\\connection.js:533:15)\n    at emitOne (events.js:116:13)\n    at TLSSocket.emit (events.js:211:7)\n    at addChunk (_stream_readable.js:263:12)\n    at readableAddChunk (_stream_readable.js:250:11)\n    at TLSSocket.Readable.push (_stream_readable.js:208:10)\n    at TLSWrap.onread (net.js:601:20)","operationTime":{"_bsontype":"Timestamp","low_":2,"high_":1556525776},"ok":0,"errmsg":"E11000 duplicate key error collection: 5cc0a701ff7a2509b3b86a47_test.staffs index: registrationId_1 dup key: { : \"123\" }","code":11000,"codeName":"DuplicateKey","$clusterTime":{"clusterTime":{"_bsontype":"Timestamp","low_":2,"high_":1556525776},"signature":{"hash":{"_bsontype":"Binary","sub_type":0,"position":20,"buffer":{"0":172,"1":132,"2":213,"3":204,"4":78,"5":203,"6":219,"7":175,"8":26,"9":151,"10":90,"11":20,"12":53,"13":4,"14":9,"15":68,"16":213,"17":0,"18":44,"19":251}},"keyId":{"_bsontype":"Long","low_":1,"high_":1555621496}}},"name":"MongoError","level":"error","timestamp":"2019-04-29T08:16:21.334Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:19:29.176Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:19:29.940Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:19:51.724Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:19:52.427Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:20:19.620Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:20:20.349Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:21:05.484Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:21:06.250Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:26:26.600Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:26:27.365Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:29:58.309Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:29:59.093Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:35:24.162Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:35:24.918Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:40:46.958Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:40:47.759Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:41:59.586Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:42:00.355Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:47:54.943Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:47:55.730Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:50:30.072Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:50:30.811Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:52:12.189Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:52:13.012Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:53:58.656Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:53:59.484Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:54:09.762Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:54:10.424Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:54:33.382Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:54:34.003Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:54:57.746Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:54:58.957Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:56:59.503Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:57:00.317Z"}

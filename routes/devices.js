@@ -34,7 +34,7 @@ router.put('/:id', [auth, validateObjectId], async (req, res) => {
   res.send(device);
 });
 
-router.delete('/:id', [auth, admin, validateObjectId], async (req, res) => {
+router.delete('/:id', [auth, validateObjectId], async (req, res) => {
   const device = await Device.findByIdAndRemove(req.params.id);
 
   if (!device) return res.status(404).send('The device with the given ID was not found.');

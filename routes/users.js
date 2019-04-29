@@ -8,9 +8,15 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
+
 router.get('/me', auth, async (req, res) => {
   const user = await User.findById(req.user._id).select('-password');
   res.send(user);
+});
+
+router.get('/', auth, async (req, res) => {
+  const users = await User.find().select('-password');
+  res.send(users);
 });
 
 router.post('/', async (req, res) => {
@@ -30,6 +36,12 @@ router.post('/', async (req, res) => {
   
   const token = user.generateAuthToken();
   res.header('x-auth-token', token).send(_.pick(user, ['name', 'username', 'area', 'rol', 'team']));
+});
+
+router.get('/:id', auth, async (req, res) => {
+  const user = await User.findById(req.params.id);
+  if (!user) return res.status(404).send('The user with the given ID was not found.');
+  res.send(_.pick(user, ['name', 'username', 'team']));
 });
 
 module.exports = router; 

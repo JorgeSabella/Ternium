@@ -32,6 +32,7 @@ router.post('/', async (req, res) => {
             name: staff.name, 
             registrationId: staff.registrationId
         },
+        mac: req.body.mac
     });
 
     session = await session.save();
