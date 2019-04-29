@@ -46,10 +46,22 @@ const sessionSchema = new mongoose.Schema({
   },
   data: {
     type: new mongoose.Schema({
-        gasNatural: Number,
-        co2: Number,
-        hidrogeno: Number,
-        temperatura: Number
+        gasNatural: {
+            type: Number,
+            default: 0
+        },
+        co2:  {
+            type: Number,
+            default: 0
+        },
+        hidrogeno:  {
+            type: Number,
+            default: 0
+        },
+        temperatura:  {
+            type: Number,
+            default: 0
+        },
     })
   },
   mac: String
