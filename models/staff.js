@@ -1,6 +1,5 @@
 const Joi = require('joi');
 const mongoose = require('mongoose');
-const { userSchema } = require('./user');
 
 const staffSchema = new mongoose.Schema({
   name: {
@@ -19,7 +18,8 @@ const staffSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 2,
-    maxlength: 1024
+    maxlength: 1024,
+    unique: true
   },
   supervisor: { 
     type: new mongoose.Schema({
@@ -53,6 +53,6 @@ function validateStaff(staff) {
   return Joi.validate(staff, schema);
 }
 
-exports.staffSchema = staffSchema;
+//exports.staffSchema = staffSchema;
 exports.Staff = Staff; 
 exports.validate = validateStaff;
