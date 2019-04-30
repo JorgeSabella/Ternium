@@ -1,9 +1,10 @@
 const { History, validateHistory } = require('../models/history');
 const { Alarms, validateAlarms } = require('../models/alarms');
+const auth = require('../middleware/auth');
 const express = require('express');
 const router = express.Router();
 
-router.get('/:Number', async (req, res) => {
+router.get('/:Number', auth, async (req, res) => {
     var number = req.params.Number;
     for (var i = 10; i <= req.params.Number; i += 10) {
         if (i === 10) {
@@ -24,7 +25,7 @@ router.get('/:Number', async (req, res) => {
     }
 });
 
-router.get('/search/:Data', async (req, res) => {
+router.get('/search/:Data', auth, async (req, res) => {
     var data = req.params.Data;
     try {
         const historySesion = await History.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
@@ -53,7 +54,7 @@ router.get('/search/:Data', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     console.log('Nueva Peticion!');
     const { error } = validateHistory(req.body);
     if (error) return res.status(400).send(error.details[0].message);
@@ -72,7 +73,7 @@ router.post('/', async (req, res) => {
     res.send(history);
 });
 
-router.post('/alarms', async (req, res) => {
+router.post('/alarms', auth, async (req, res) => {
     console.log('Nueva Peticion!');
     const { error } = validateAlarms(req.body);
     if (error) return res.status(400).send(error.details[0].message);
