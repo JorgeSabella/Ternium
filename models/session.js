@@ -94,6 +94,6 @@ function validateSession(session) {
   return Joi.validate(session, schema);
 }
 
-//exports.sessionSchema = sessionSchema;
+exports.sessionSchema = sessionSchema;
 exports.Session = Session; 
 exports.validate = validateSession;
