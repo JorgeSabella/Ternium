@@ -21,13 +21,16 @@ router.post('/', async (req, res) => {
         mac: req.body.mac,
         co2: req.body.co2,
         hidrogeno: req.body.hidrogeno,
-        temperatura: req.body.temperatura
+        temperatura: req.body.temperatura,
+        alert: req.body.alert
     });
     data = await data.save();
     console.log(data);
+    // si alerta es true guardar en el historial de alertas
     
     await Session.findByIdAndUpdate(session._id,
         {   
+            alert: data.alert,
             data : {
                 gasNatural: data.gasNatural,
                 co2: data.co2,
