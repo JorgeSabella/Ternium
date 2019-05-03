@@ -157,5 +157,5 @@ const History = mongoose.model('History', new mongoose.Schema({
 }, {
         timestamps: true
     }));
-    
-exports.validate = validateHistory;
+
+exports.History = History;
