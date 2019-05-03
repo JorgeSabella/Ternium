@@ -1,4 +1,3 @@
-const Joi = require('joi');
 const mongoose = require('mongoose');
 
 const GPSSchema = mongoose.Schema({
@@ -158,21 +157,5 @@ const History = mongoose.model('History', new mongoose.Schema({
 }, {
         timestamps: true
     }));
-
-function validateHistory(user) {
-    const schema = {
-        idSesion: Joi.string().alphanum().required(),
-        initialDate: Joi.Date().required(),
-        endDate: Joi.Date().required(),
-        supervisor: Joi.required(),
-        staff: Joi.required(),
-        MAC: Joi.string().required(),
-        GPS: Joi.required(),
-        Data: Joi.required()
-    };
-
-    return Joi.validate(user, schema);
-}
-
-exports.History = History;
+    
 exports.validate = validateHistory;

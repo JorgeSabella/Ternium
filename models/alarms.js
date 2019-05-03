@@ -1,4 +1,3 @@
-const Joi = require('joi');
 const mongoose = require('mongoose');
 
 const SensorSchema = mongoose.Schema({
@@ -58,5 +57,4 @@ function validateAlarms(user) {
     return Joi.validate(user, schema);
 }
 
-exports.Alarms = Alarms;
 exports.validateAlarms = validateAlarms;
