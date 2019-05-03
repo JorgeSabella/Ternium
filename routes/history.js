@@ -5,53 +5,31 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/:Number', auth, async (req, res) => {
-    var number = req.params.Number;
-    for (var i = 10; i <= req.params.Number; i += 10) {
-        if (i === 10) {
-            number = number - 10;
-        } else {
-            number = number - 5;
-        }
-    }
-    try {
-        const history = await History.find().skip(number).limit(5);
-        const alarms = await Alarms.find().skip(number).limit(5);
-        res.json([history, alarms]);
-    }
-    catch (err) {
-        res.status(500).send({
-            message: err.message || "Something wrong while retrieving history."
-        });
-    }
+    const history = await History.find().limit(req.params.Number / 2);
+    const alarms = await Alarms.find().limit(req.params.Number / 2);
+    res.json([history, alarms]);
 });
 
 router.get('/search/:Data', auth, async (req, res) => {
     var data = req.params.Data;
-    try {
-        const historySesion = await History.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
-        const historyTrabajdor = await History.find({ idTrabajador: { $regex: `${data}`, $options: 'i' } });
-        const historySupervisor = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-        const historyBeginTime = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-        const historyEndTime = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-        const historyArea = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-        const historyLugar = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-        const historyMAC = await History.find({ MAC: { $regex: `${data}`, $options: 'i' } });
-        const ObjHistory = Object.assign(historySesion, historyTrabajdor, historySupervisor, historyBeginTime, historyEndTime, historyArea, historyLugar, historyMAC);
+    const historySesion = await History.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
+    const historyTrabajdor = await History.find({ idTrabajador: { $regex: `${data}`, $options: 'i' } });
+    const historySupervisor = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const historyBeginTime = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const historyEndTime = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const historyArea = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const historyLugar = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const historyMAC = await History.find({ MAC: { $regex: `${data}`, $options: 'i' } });
+    const ObjHistory = Object.assign(historySesion, historyTrabajdor, historySupervisor, historyBeginTime, historyEndTime, historyArea, historyLugar, historyMAC);
 
-        const alarmID = await Alarms.find({ idAlarma: { $regex: `${data}`, $options: 'i' } });
-        const alarmSesion = await Alarms.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
-        const alarmTrabajador = await Alarms.find({ idTrabajador: { $regex: `${data}`, $options: 'i' } });
-        const alarmSupervisor = await Alarms.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-        const alarmMAC = await Alarms.find({ MAC: { $regex: `${data}`, $options: 'i' } });
-        const ObjAlarms = Object.assign(alarmID, alarmSesion, alarmTrabajador, alarmSupervisor, alarmMAC);
+    const alarmID = await Alarms.find({ idAlarma: { $regex: `${data}`, $options: 'i' } });
+    const alarmSesion = await Alarms.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
+    const alarmTrabajador = await Alarms.find({ idTrabajador: { $regex: `${data}`, $options: 'i' } });
+    const alarmSupervisor = await Alarms.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const alarmMAC = await Alarms.find({ MAC: { $regex: `${data}`, $options: 'i' } });
+    const ObjAlarms = Object.assign(alarmID, alarmSesion, alarmTrabajador, alarmSupervisor, alarmMAC);
 
-        res.json([ObjHistory, ObjAlarms]);
-    }
-    catch (err) {
-        res.status(500).send({
-            message: err.message || "Something wrong while retrieving history."
-        });
-    }
+    res.json([ObjHistory, ObjAlarms]);
 });
 
 router.post('/', auth, async (req, res) => {

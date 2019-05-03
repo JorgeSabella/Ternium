@@ -12,22 +12,7 @@ const GPSSchema = mongoose.Schema({
     }
 });
 
-const OxigenoSchema = mongoose.Schema({
-    Min: {
-        type: Number,
-        required: true
-    },
-    Max: {
-        type: Number,
-        required: true
-    },
-    Prom: {
-        type: Number,
-        required: true
-    }
-});
-
-const NitrogenoSchema = mongoose.Schema({
+const HidrogenoSchema = mongoose.Schema({
     Min: {
         type: Number,
         required: true
@@ -72,13 +57,24 @@ const GasNaturalSchema = mongoose.Schema({
     }
 });
 
-const GasesSchema = mongoose.Schema({
-    Oxigeno: {
-        type: OxigenoSchema,
+const TemperaturaSchema = mongoose.Schema({
+    Min: {
+        type: Number,
         required: true
     },
-    Nitrogeno: {
-        type: NitrogenoSchema,
+    Max: {
+        type: Number,
+        required: true
+    },
+    Prom: {
+        type: Number,
+        required: true
+    }
+})
+
+const DataSchema = mongoose.Schema({
+    Hidrogeno: {
+        type: HidrogenoSchema,
         required: true
     },
     CO: {
@@ -88,52 +84,75 @@ const GasesSchema = mongoose.Schema({
     GasNatural: {
         type: GasNaturalSchema,
         required: true
+    },
+    Temperatura: {
+        type: TemperaturaSchema,
+        required: true
     }
+});
+
+const SupervisorSchema = mongoose.Schema({
+        name: {
+            type: String,
+            required: true,
+            minlength: 2,
+            maxlength: 1024
+        },
+        username: {
+            type: String,
+            required: true,
+            minlength: 2,
+            maxlength: 1024
+        }
+});
+
+const StaffSchema = mongoose.Schema({
+        name: {
+            type: String,
+            required: true,
+            minlength: 2,
+            maxlength: 1024
+        },
+        registrationId: {
+            type: String,
+            required: true,
+            minlength: 2,
+            maxlength: 1024
+        }
 });
 
 const History = mongoose.model('History', new mongoose.Schema({
     idSesion: {
         type: String,
         required: true,
+        unique: true
     },
-    idTrabajador: {
-        type: String,
-        required: true
+    initialDate: {
+        type: Date,
+        required: true,
     },
-    idSupervisor: {
-        type: String,
-        required: true
-    },
-    Begin_time: {
+    endDate: {
         type: Date,
         required: true
     },
-    End_time: {
-        type: Date,
+    supervisor: {
+        type: SupervisorSchema,
         required: true
     },
-    Area: {
-        type: String,
-        required: true
-    },
-    Lugar: {
-        type: String,
+    staff: {
+        type: StaffSchema,
         required: true
     },
     MAC: {
         type: String,
         required: true
     },
-    Temperatura: {
-        type: Number,
-        required: true
-    },
     GPS: {
         type: GPSSchema,
         required: true
     },
-    Gases: {
-        type: GasesSchema,
+    Data: {
+        type: DataSchema,
         required: true
     }
 }, {
@@ -143,16 +162,13 @@ const History = mongoose.model('History', new mongoose.Schema({
 function validateHistory(user) {
     const schema = {
         idSesion: Joi.string().alphanum().required(),
-        idTrabajador: Joi.number().required(),
-        idSupervisor: Joi.number().required(),
-        Begin_time: Joi.Date().required(),
-        End_time: Joi.Date().required(),
-        Area: Joi.String().required(),
-        Lugar: Joi.String().required(),
+        initialDate: Joi.Date().required(),
+        endDate: Joi.Date().required(),
+        supervisor: Joi.required(),
+        staff: Joi.required(),
         MAC: Joi.string().required(),
-        Temperatura: Joi.number().required(),
         GPS: Joi.required(),
-        Gases: Joi.required()
+        Data: Joi.required()
     };
 
     return Joi.validate(user, schema);

@@ -161,3 +161,9 @@
 {"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:54:58.957Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-29T08:56:59.503Z"}
 {"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-29T08:57:00.317Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-30T17:44:00.949Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-30T17:44:01.874Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-30T17:47:06.802Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-30T17:47:07.697Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-04-30T17:49:08.557Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-04-30T17:49:09.405Z"}
