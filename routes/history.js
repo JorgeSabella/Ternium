@@ -37,4 +37,13 @@ router.get('/search/:Data', async (req, res) => {
     res.json([ObjHistory, ObjAlarms]);
 });
 
+router.get('/:initialDate/:endDate', async (req, res) => {
+    const inital = req.params.initialDate;
+    const end = req.params.endDate;
+    
+    const historys = await History.find({ 'initialDate': {$gte: inital, $lte: end}, 'endDate': {$gte: inital, $lte: end}});
+    res.send(historys);
+  });
+  
+
 module.exports = router;
