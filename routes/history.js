@@ -4,13 +4,18 @@ const auth = require('../middleware/auth');
 const express = require('express');
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+    const historys = await History.find();
+    res.send(historys);
+});
+
 router.get('/:Number', auth, async (req, res) => {
     const history = await History.find().limit(req.params.Number / 2);
     const alarms = await Alarms.find().limit(req.params.Number / 2);
     res.json([history, alarms]);
 });
 
-router.get('/search/:Data', auth, async (req, res) => {
+router.get('/search/:Data', async (req, res) => {
     var data = req.params.Data;
     const historySesion = await History.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
     const historyTrabajdor = await History.find({ idTrabajador: { $regex: `${data}`, $options: 'i' } });

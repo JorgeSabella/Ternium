@@ -124,7 +124,7 @@ const History = mongoose.model('History', new mongoose.Schema({
     idSesion: {
         type: String,
         required: true,
-        unique: true
+        //unique: true
     },
     initialDate: {
         type: Date,
@@ -132,7 +132,8 @@ const History = mongoose.model('History', new mongoose.Schema({
     },
     endDate: {
         type: Date,
-        required: true
+        required: true,
+        default: Date.now
     },
     supervisor: {
         type: SupervisorSchema,

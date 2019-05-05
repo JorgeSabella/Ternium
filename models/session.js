@@ -70,6 +70,22 @@ const sessionSchema = new mongoose.Schema({
       temperatura: 0
     })
   },
+  gps: {
+    type: new mongoose.Schema({
+        latitud: {
+            type: Number,
+            required: true,
+        },
+        longitud:  {
+            type: Number,
+            required: true,
+        }
+    }),
+    default: () => ({
+      longitud: 0,
+      latitud: 0
+    })
+  },
   mac: {
     type: String,
     required: true,
