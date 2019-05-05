@@ -15,4 +15,12 @@ router.delete('/:id', async (req, res) => {
   res.send(alert);
 });
 
+router.get('/:initialDate/:endDate', async (req, res) => {
+  const inital = req.params.initialDate;
+  const end = req.params.endDate;
+  
+  const alerts = await Alert.find({ 'date': {$gte: inital, $lte: end}});
+  res.send(alerts);
+});
+
 module.exports = router;
