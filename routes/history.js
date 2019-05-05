@@ -10,17 +10,15 @@ router.get('/:Number', auth, async (req, res) => {
     res.json([history, alarms]);
 });
 
-router.get('/search/:Data', auth, async (req, res) => {
+router.get('/search/:Data', async (req, res) => {
     var data = req.params.Data;
     const historySesion = await History.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
-    const historyTrabajdor = await History.find({ idTrabajador: { $regex: `${data}`, $options: 'i' } });
-    const historySupervisor = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-    const historyBeginTime = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-    const historyEndTime = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-    const historyArea = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
-    const historyLugar = await History.find({ idSupervisor: { $regex: `${data}`, $options: 'i' } });
+    const historyTrabajador = await History.find({ 'staff.name': { $regex: `${data}`, $options: 'i' } });
+    const historyTrabajadorId = await History.find({ 'staff.registrationId': { $regex: `${data}`, $options: 'i' } });
+    const historySupervisor = await History.find({ 'supervisor.name': { $regex: `${data}`, $options: 'i' } });
+    const historySupervisorId = await History.find({ 'supervisor.username': { $regex: `${data}`, $options: 'i' } });
     const historyMAC = await History.find({ MAC: { $regex: `${data}`, $options: 'i' } });
-    const ObjHistory = Object.assign(historySesion, historyTrabajdor, historySupervisor, historyBeginTime, historyEndTime, historyArea, historyLugar, historyMAC);
+    const ObjHistory = Object.assign(historySesion, historyTrabajador, historyTrabajadorId, historySupervisor, historySupervisorId, historyMAC);
 
     const alarmID = await Alarms.find({ idAlarma: { $regex: `${data}`, $options: 'i' } });
     const alarmSesion = await Alarms.find({ idSesion: { $regex: `${data}`, $options: 'i' } });

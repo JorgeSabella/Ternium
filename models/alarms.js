@@ -44,17 +44,4 @@ const Alarms = mongoose.model('Alarms', new mongoose.Schema({
         timestamps: true
     }));
 
-function validateAlarms(user) {
-    const schema = {
-        idAlarma: Joi.string().alphanum().required(),
-        idSesion: Joi.string().alphanum().required(),
-        idTrabajador: Joi.string().required(),
-        idSupervisor: Joi.string().required(),
-        MAC: Joi.string().required(),
-        Sensor: Joi.required()
-    };
-
-    return Joi.validate(user, schema);
-}
-
-exports.validateAlarms = validateAlarms;
+exports.Alarms = Alarms;
