@@ -92,7 +92,15 @@ const sessionSchema = new mongoose.Schema({
     minlength: 2,
     maxlength: 1024
   },
-  alert: {
+  alertaBoton: {
+    type: Boolean,
+    default: false
+  },
+  alertaMetrica: {
+    type: String,
+    default: ''
+  },
+  alertaCaida: {
     type: Boolean,
     default: false
   }

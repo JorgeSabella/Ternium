@@ -341,3 +341,23 @@
 {"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T16:18:26.435Z"}
 {"message":"Cannot read property 'find' of undefined","stack":"TypeError: Cannot read property 'find' of undefined\n    at router.get (C:\\Users\\Jorge Andres Sabella\\semestreI\\Ternium\\routes\\history.js:30:34)\n    at process._tickCallback (internal/process/next_tick.js:68:7)","level":"error","timestamp":"2019-05-05T16:18:28.597Z"}
 {"message":"Cannot read property 'find' of undefined","stack":"TypeError: Cannot read property 'find' of undefined\n    at router.get (C:\\Users\\Jorge Andres Sabella\\semestreI\\Ternium\\routes\\history.js:30:34)\n    at process._tickCallback (internal/process/next_tick.js:68:7)","level":"error","timestamp":"2019-05-05T16:19:07.848Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:05:30.056Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:05:30.858Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:06:35.822Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:06:36.623Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:06:38.303Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:06:39.419Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:07:32.504Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:07:33.187Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:08:48.545Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:08:49.258Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:10:27.853Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:10:28.668Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:12:27.012Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:12:27.798Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:14:32.151Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:14:32.983Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:18:19.032Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:18:19.906Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-05-05T17:20:01.625Z"}
+{"level":"info","message":"Connected to mongodb+srv://jorge:Erikfaz2019@cluster0-c3ir4.mongodb.net/test?retryWrites=true...","timestamp":"2019-05-05T17:20:02.511Z"}
