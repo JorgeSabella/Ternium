@@ -15,6 +15,21 @@ router.delete('/:id', async (req, res) => {
   res.send(alert);
 });
 
+router.get('/search/:Data', async (req, res) => {
+  var data = req.params.Data;
+  //const alertID = await Alert.find({ _id: { $regex: `${data}`, $options: 'i' } });
+  const alertSesion = await Alert.find({ 'session._id': { $regex: `${data}`, $options: 'i' } });
+  const alertTrabajadorId = await Alert.find({ 'session.staff.registrationId': { $regex: `${data}`, $options: 'i' } });
+  const alertTrabajador = await Alert.find({ 'session.staff.name': { $regex: `${data}`, $options: 'i' } });
+  const alertSupervisorId = await Alert.find({ 'session.supervisor.username': { $regex: `${data}`, $options: 'i' } });
+  const alertSupervisor = await Alert.find({ 'session.supervisor.name': { $regex: `${data}`, $options: 'i' } });
+  const alertMAC = await Alert.find({ 'session.mac': { $regex: `${data}`, $options: 'i' } });
+  const alertType = await Alert.find({ type: { $regex: `${data}`, $options: 'i' } });
+  const ObjAlerts = Object.assign(alertSesion, alertTrabajador, alertSupervisor, alertMAC,alertTrabajadorId, alertSupervisorId, alertType);
+
+  res.json([ObjAlerts]);
+});
+
 router.get('/:initialDate/:endDate', async (req, res) => {
   const inital = req.params.initialDate;
   const end = req.params.endDate;
@@ -22,5 +37,6 @@ router.get('/:initialDate/:endDate', async (req, res) => {
   const alerts = await Alert.find({ 'date': {$gte: inital, $lte: end}});
   res.send(alerts);
 });
+
 
 module.exports = router;
