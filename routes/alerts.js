@@ -1,18 +1,19 @@
 const {Alert} = require('../models/alert') ;
+const auth = require('../middleware/auth');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   const alerts = await Alert.find();
   res.send(alerts);
 });
 
-router.get('/:Number', async (req, res) => {
+router.get('/:Number', auth, async (req, res) => {
   const alerts = await Alert.find().limit(req.params.Number * 1);
   res.json(alerts);
 });
 
-router.get('/search/:Data', async (req, res) => {
+router.get('/search/:Data', auth, async (req, res) => {
   var data = req.params.Data;
   const alertSesion = await Alert.find({ 'session._id': { $regex: `${data}`, $options: 'i' } });
   const alertTrabajadorId = await Alert.find({ 'session.staff.registrationId': { $regex: `${data}`, $options: 'i' } });
@@ -26,7 +27,7 @@ router.get('/search/:Data', async (req, res) => {
   res.json([ObjAlerts]);
 });
 
-router.get('/:initialDate/:endDate', async (req, res) => {
+router.get('/:initialDate/:endDate', auth, async (req, res) => {
   const inital = req.params.initialDate;
   const end = req.params.endDate;
   
@@ -34,7 +35,7 @@ router.get('/:initialDate/:endDate', async (req, res) => {
   res.send(alerts);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   const alert = await Alert.findByIdAndDelete(req.params.id);
 
   if (!alert) return res.status(404).send('The alert with the given registration id was not found.');

@@ -3,17 +3,17 @@ const auth = require('../middleware/auth');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
     const historys = await History.find();
     res.send(historys);
 });
 
-router.get('/:Number', async (req, res) => {
+router.get('/:Number', auth, async (req, res) => {
     const history = await History.find().limit(req.params.Number * 1);
     res.json(history);
 });
 
-router.get('/search/:Data', async (req, res) => {
+router.get('/search/:Data', auth, async (req, res) => {
     var data = req.params.Data;
     const historySesion = await History.find({ idSesion: { $regex: `${data}`, $options: 'i' } });
     const historyTrabajador = await History.find({ 'staff.name': { $regex: `${data}`, $options: 'i' } });
@@ -26,7 +26,7 @@ router.get('/search/:Data', async (req, res) => {
     res.json([ObjHistory]);
 });
 
-router.get('/:initialDate/:endDate', async (req, res) => {
+router.get('/:initialDate/:endDate', auth, async (req, res) => {
     const inital = req.params.initialDate;
     const end = req.params.endDate;
     

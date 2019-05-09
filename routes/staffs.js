@@ -7,12 +7,12 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   const staffs = await Staff.find().sort('name');
   res.send(staffs);
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     const { error } = validate(req.body); 
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
     res.send(staff);
 });
 
-router.put('/:id', [ validateObjectId], async (req, res) => {
+router.put('/:id', [auth, validateObjectId], async (req, res) => {
   const { error } = validate(req.body); 
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -65,7 +65,7 @@ router.put('/:id', [ validateObjectId], async (req, res) => {
   res.send(staff);
 });
 
-router.delete('/:id', [ validateObjectId], async (req, res) => {
+router.delete('/:id', [auth, validateObjectId], async (req, res) => {
   const staff = await Staff.findByIdAndRemove(req.params.id);
 
   if (!staff) return res.status(404).send('The staff with the given ID was not found.');
@@ -73,7 +73,7 @@ router.delete('/:id', [ validateObjectId], async (req, res) => {
   res.send(staff);
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
   const staff = await Staff.findOne({registrationId: req.params.id});
 
   if (!staff) return res.status(404).send('The staff with the given registration id was not found.');

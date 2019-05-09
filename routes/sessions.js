@@ -10,12 +10,12 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   const sessions = await Session.find().sort('initialDate');
   res.send(sessions);
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     const { error } = validate(req.body); 
     if (error) return res.status(400).send(error.details[0].message);
     const user = await User.findOne({username: req.body.supervisor});
@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
 //   res.send(staff);
 // });
 
-router.delete('/:id', [validateObjectId], async (req, res) => {
+router.delete('/:id', [auth, validateObjectId], async (req, res) => {
   const session = await Session.findByIdAndRemove(req.params.id);
   if (!session) return res.status(404).send('The session with the given ID was not found.');
   const datas = await Data.find({mac: session.mac});
@@ -124,7 +124,7 @@ router.delete('/:id', [validateObjectId], async (req, res) => {
   res.send(session);
 });
 
-router.get('/:id', validateObjectId, async (req, res) => {
+router.get('/:id',[auth, validateObjectId], async (req, res) => {
   const session = await Session.findById(req.params.id);
 
   if (!session) return res.status(404).send('The session with the given ID was not found.');

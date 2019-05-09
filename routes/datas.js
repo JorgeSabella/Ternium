@@ -1,11 +1,12 @@
 const {Data} = require('../models/data');
 const {Session} = require('../models/session') ;
 const {Alert} = require('../models/alert') ;
+const auth = require('../middleware/auth');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
     console.log('Nueva Peticion!');
     const datas = await Data.find();
     res.send(datas);
