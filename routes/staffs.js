@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
   const staffs = await Staff.find().sort('name');
   res.send(staffs);
 });
@@ -73,7 +73,7 @@ router.delete('/:id', [auth, validateObjectId], async (req, res) => {
   res.send(staff);
 });
 
-router.get('/:id', auth, async (req, res) => {
+router.get('/:id', async (req, res) => {
   const staff = await Staff.findOne({registrationId: req.params.id});
 
   if (!staff) return res.status(404).send('The staff with the given registration id was not found.');

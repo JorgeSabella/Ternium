@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
   const devices = await Device.find().sort('mac');
   res.send(devices);
 });
@@ -42,7 +42,7 @@ router.delete('/:id', [auth, validateObjectId], async (req, res) => {
   res.send(device);
 });
 
-router.get('/:id', auth, validateObjectId, async (req, res) => {
+router.get('/:id', validateObjectId, async (req, res) => {
   const device = await Device.findById(req.params.id);
 
   if (!device) return res.status(404).send('The device with the given ID was not found.');
